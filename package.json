@@ -12,8 +12,8 @@
     "nodemon": "^1.19.4"
   },
   "scripts": {
-    "dev": "DEBUG=app:* nodemon src/index.js",
-    "start": "NODE_ENV=production node src/index.js"
+    "dev": "SET DEBUG=app:* nodemon src/index.js",
+    "start": "SET NODE_ENV=production & nodemon src/index.js"
   },
   "repository": {
     "type": "git",
