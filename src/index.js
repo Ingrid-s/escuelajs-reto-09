@@ -1,17 +1,14 @@
 const express = require('express');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { config } = require('./config');
+const platziStore = require('./routes');
+
 
 const app = express();
 
 //mildeware BODYPARSER
-app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-const { config } = require('./config');
-const platziStore = require('./routes')
-
-//body parser
-app.use(express.json());
 
 app.get('/', (req, res) => {
   let userInfo = req.header("user-agent");
